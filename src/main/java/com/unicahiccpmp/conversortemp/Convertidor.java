@@ -36,6 +36,10 @@ public class Convertidor extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
 
@@ -75,6 +79,34 @@ public class Convertidor extends javax.swing.JFrame {
         jLabel4.setText("Some");
         jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
+        jButton3.setText("-");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
+        jButton4.setText("+");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+
+        jButton5.setText("-");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+
+        jButton6.setText("+");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -82,7 +114,7 @@ public class Convertidor extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(27, 200, Short.MAX_VALUE)
+                        .addGap(27, 107, Short.MAX_VALUE)
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton2))
@@ -97,7 +129,17 @@ public class Convertidor extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextField1)
-                                    .addComponent(jTextField2))))))
+                                    .addComponent(jTextField2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -106,18 +148,23 @@ public class Convertidor extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton5)
+                        .addComponent(jButton6)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -133,8 +180,7 @@ public class Convertidor extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -163,6 +209,48 @@ public class Convertidor extends javax.swing.JFrame {
         jLabel4.setText(String.format("%f", celcius));
         
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        float celcius = Float.parseFloat(jTextField1.getText());
+        celcius -= 1;
+        float farenheit = (celcius * 9 / 5) + 32;
+        jTextField1.setText(String.valueOf(celcius));
+        jTextField2.setText(String.valueOf(farenheit));
+        jLabel4.setText(String.format(" %f", farenheit));
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        float celcius = Float.parseFloat(jTextField1.getText());
+        celcius += 1;
+        float farenheit = (celcius * 9 / 5) + 32;
+        jTextField1.setText(String.valueOf(celcius));
+        jTextField2.setText(String.valueOf(farenheit));
+        jLabel4.setText(String.format(" %f", farenheit));
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+        float farenheit = Float.parseFloat(jTextField2.getText());
+        farenheit -=1;
+        float celcius = (farenheit - 32) * 5 / 9;
+        
+        jTextField1.setText(String.valueOf(celcius));
+        jTextField2.setText(String.valueOf(farenheit));
+        jLabel4.setText(String.format("%f", celcius));
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        // TODO add your handling code here:
+        float farenheit = Float.parseFloat(jTextField2.getText());
+        farenheit +=1;
+        float celcius = (farenheit - 32) * 5 / 9;
+        
+        jTextField1.setText(String.valueOf(celcius));
+        jTextField2.setText(String.valueOf(farenheit));
+        jLabel4.setText(String.format("%f", celcius));
+    }//GEN-LAST:event_jButton6MouseClicked
 
     /**
      * @param args the command line arguments
@@ -202,6 +290,10 @@ public class Convertidor extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
